@@ -2,9 +2,8 @@
 for num in range(100):
     if num < 10:
         num = str(num)
-        num ='0' + num
-    sprt = ", "
+        num = '0' + num
     if num == 99:
-        sprt = ""
-    print("{}{}".format(num, sprt), end="")
-print('\n')
+        print("{}".format(num))
+    else:
+        print("{},".format(num), end="")
