@@ -31,7 +31,7 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = newNode;
 		return (newNode);
 	}
-	while (ptr != NULL)
+	while (ptr->next != NULL)
 	{
 		if ((newNode->n > ptr->n) && (newNode->n < ptr->next->n))
 		{
