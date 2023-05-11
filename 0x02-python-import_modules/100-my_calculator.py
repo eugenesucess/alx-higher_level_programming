@@ -3,15 +3,15 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
     size = len(argv) - 1
-    a = 3
-    b = 5
+    a = int(argv[1])
+    b = int(argv[3])
     if size != 3:
-       print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-       exit(1)
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     if argv[2] == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))
     elif argv[2] == '-':
-        print("{} - {} = {}".format(a, b, sub(a,b)))
+        print("{} - {} = {}".format(a, b, sub(a, b)))
     elif argv[2] == '*':
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif argv[2] == '/':
