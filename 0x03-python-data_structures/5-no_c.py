@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 def no_c(my_string):
-    newStr = ""
-    for i in range(len(my_string)):
-        if my_string[i] == 'c' or my_string[i] == 'C':
-            continue
-        else:
-            newStr += my_string[i]
-    return newStr
+    newStr = {99:None}
+    nz = {67:None}
+    newest =  my_string.translate(newStr)
+    rsStr = newest.translate(nz)
+    return rsStr
