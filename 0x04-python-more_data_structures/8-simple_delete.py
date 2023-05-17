@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    if str(key) not in a_dictionary:
+    ky = str(key)
+    if ky not in a_dictionary:
         return a_dictionary
     else:
-        del a_dictionary[str(key)]
+        a_dictionary.pop(ky)
         return a_dictionary
