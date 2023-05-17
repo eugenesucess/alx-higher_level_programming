@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def multiply_by_2(a_dictionary):
-    #holder = []
+    holder = []
     listOfValues = list(a_dictionary.values())
     for i in listOfValues:
        holder.append(i * 2)
