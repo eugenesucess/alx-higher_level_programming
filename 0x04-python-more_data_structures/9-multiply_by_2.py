@@ -5,7 +5,8 @@ def multiply_by_2(a_dictionary):
     #for i in listOfValues:
        #holder.append(i * 2)
     #newDict = dict(zip(list(a_dictionary.keys()), holder))
-    #return newDict    new_dictionary = {}
+    #return newDict
+    new_dictionary = {}
     for key in a_dictionary:
         new_dictionary.update({key: a_dictionary.get(key) * 2})
     return new_dictionary
