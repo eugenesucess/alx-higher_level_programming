@@ -4,6 +4,6 @@
 
 
 class Square:
-  """ Initialization of class with init"""
-  def __init__(self, size):
-    self.__size = size
+    """ Initialization of class with init"""
+    def __init__(self, size):
+        self.__size = size
