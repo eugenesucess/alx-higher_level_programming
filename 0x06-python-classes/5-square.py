@@ -28,7 +28,8 @@ class Square:
     """ Creation of public instance method that return area of square """
     def area(self):
         return self.__size * self.__size
+    """ my_print method that print square """
     def my_print(self):
-      mystr = '#'
-      for i in range(0, self.__size):
-        print(mystr * self.__size)
+        mystr = '#'
+        for i in range(0, self.__size):
+            print(mystr * self.__size)
