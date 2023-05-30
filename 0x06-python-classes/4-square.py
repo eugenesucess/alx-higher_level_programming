@@ -12,7 +12,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.size = size
+            self.__size = size
     """ creation of property that set size of the square """
     @property
     def size(Self):
@@ -20,6 +20,10 @@ class Square:
     """ creation of property setter that set private variable """
     @size.setter
     def size(self, value):
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
       self.__size = value
     """ Creation of public instance method that return area of square """
     def area(self):
