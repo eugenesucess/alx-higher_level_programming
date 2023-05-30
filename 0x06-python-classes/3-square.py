@@ -4,6 +4,7 @@
 
 
 class Square:
+
     """ Initialization of class with init"""
     def __init__(self, size=0):
         if type(size) is not int:
@@ -14,4 +15,4 @@ class Square:
             self.__size = size
     """ Creation of public instance method that return area of square """
     def area(self):
-      return self.__size * self.__size
+        return self.__size * self.__size
