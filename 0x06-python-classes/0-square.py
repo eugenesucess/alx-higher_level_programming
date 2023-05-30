@@ -1,10 +1,9 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
-""" This is pythin class declartion """
+"""Write an empty class Square that defines a square"""
 
 
 class Square:
-    """ Pass help to create empty class"""
-
+    """ Pass Works to do nothing in the class"""
 
     pass
