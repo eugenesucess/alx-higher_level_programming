@@ -7,8 +7,8 @@ class Square:
 
     """ Initialization of class with init"""
     def __init__(self, size=0, position=(0, 0)):
-            self.__size = size
-            self.__position = position
+        self.__size = size
+        self.__position = position
     """ creation of property that set size of the square """
     @property
     def size(self):
@@ -21,28 +21,30 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-     @property
+
+    @property
     def position(self):
-      return self.__position
+        return self.__position
+
     @position.setter
     def position(self, value):
-      if (not isinstance(value, tuple) or
-          (len(value) != 2)) or
-          (not isinstance(i, int) for i in range(len(value)) or
-          (j < 0 for j in value)):
-        raise TypeError("position must be a tuple of 2 positive integers")
-      else:
-        self.position == value
+        if (not isinstance(value, tuple) or
+                (len(value) != 2) or
+                (not isinstance(i, int) for i in range(len(value))) or
+                (j < 0 for j in value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.position == value
     """ Creation of public instance method that return area of square """
     def area(self):
         return self.__size * self.__size
     """ my_print method that print square """
     def my_print(self):
         mystr = '#'
-        if size == 0:
-          print("")
-          return
+        if self.__size == 0:
+            print("")
+        return
         [print("") for i in range(self.__position[1])]
         for i in range(0, self.__size):
-            [print("", end="") for i in range(0, self.__position)]
+            [print("", end="") for i in range(0, self.__position[0])]
             print(mystr * self.__size)
