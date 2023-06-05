@@ -63,7 +63,7 @@ class Rectangle:
             if i != self.__height - 1:
                 pr.append("\n")
         return ("".join(pr))
-      
+
     def __repr__(self):
         """string representation of Rectangle."""
         strReps = "Rectangle(" + str(self.__width)
