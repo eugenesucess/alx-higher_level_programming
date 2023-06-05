@@ -7,7 +7,7 @@ class rectangle that defines a rectangle
 class Rectangle:
     """ defines a rectangle with w and l """
     def __init__(self, width=0, height=0):
-        """ initialize rectangle 
+        """ initialize rectangle
         Args:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
