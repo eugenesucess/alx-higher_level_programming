@@ -72,6 +72,7 @@ class Rectangle:
         reps = "Rectangle(" + str(self.__width)
         reps += ", " + str(self.__height) + ")"
         return (reps)
+
     def __del__(self):
-      """ shows sign of deletion of instance """
-      print("Bye rectangle...")
+        """ shows sign of deletion of instance """
+        print("Bye rectangle...")
