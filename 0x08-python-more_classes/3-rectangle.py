@@ -51,9 +51,13 @@ class Rectangle:
             return 0
         else:
             return ((2 * self.width) + (2 * self.height))
+
     def __str__(self):
         """ if str is called it print # on the screen """
+        pr = []
         for j in range(self.__height):
             for i in range(self.__width):
-                print("#")
-            print()
+                pr.append('#')
+            if i != self.__height - 1:
+                pr.append('\n')
+        return ("".join(pr))
