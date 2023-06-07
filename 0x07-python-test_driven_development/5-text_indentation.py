@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 """
 this kind of module print new line if it finds any delimeter
