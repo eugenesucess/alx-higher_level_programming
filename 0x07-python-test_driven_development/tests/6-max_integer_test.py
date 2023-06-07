@@ -3,7 +3,7 @@ import unittest
 max_integer = __import__('6-max_integer').max_integer
 """ class that test the function that returns max integer"""
 
-class TestMaxInteger:
+class TestMaxInteger(unittest.TestCase):
     """definition of class tester"""
     def test_empty_list(self):
         """test empty list"""
