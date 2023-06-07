@@ -15,12 +15,12 @@ class TestMaxInteger:
         self.assertEqual(max_integer(mylist), 1)
     def test_ascending_order(self):
         """"test if ascending order list is passed"""
-        mylist = [1, 2, 3]
-        self.assertEqual(max_integer(mylist), 3)
+        mylist = [1, 2, 3, 4]
+        self.assertEqual(max_integer(mylist), 4)
     def test_descending_order(self):
         """test if descending order list is passed"""
-        mylist = [3, 2, 1]
-        self.assertEqual(max_integer(mylist), 3)
+        mylist = [4, 3, 2, 1]
+        self.assertEqual(max_integer(mylist), 4)
     def test_string_passed(self):
         """test if a string is passed"""
         mystr = "mymsg"
@@ -34,7 +34,7 @@ class TestMaxInteger:
         self.assertEqual(max_integer(mylist), "john")
     def test_double_passed(self):
         """if float numbers are passed"""
-        mylist = [1.4, 5.4, 6.2]
+        mylist = [1.4, 5.4, 5.7, 6.2]
         self.assertEqual(max_integer(ylist), 6.2)
 
 if __name__ == '__main__':
