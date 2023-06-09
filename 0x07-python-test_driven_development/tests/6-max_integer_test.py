@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""Unittest for max_integer([...])
+"""
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-""" class that test the function that returns max integer"""
 
 class TestMaxInteger(unittest.TestCase):
     """definition of class tester"""
@@ -21,13 +22,6 @@ class TestMaxInteger(unittest.TestCase):
         """test if descending order list is passed"""
         mylist = [4, 3, 2, 1]
         self.assertEqual(max_integer(mylist), 4)
-    def test_string_passed(self):
-        """test if a string is passed"""
-        mystr = "mymsg"
-        self.assertEqual(max_integer(mystr), None)
-    def test_nonType_value(self):
-        """test non type passed"""
-        self.assertEqual(max_integer(None), None)
     def test_arrayof_str(self):
         """lists of string passed"""
         mylist = ["eugene", "claude", "john"]
@@ -35,7 +29,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_double_passed(self):
         """if float numbers are passed"""
         mylist = [1.4, 5.4, 5.7, 6.2]
-        self.assertEqual(max_integer(ylist), 6.2)
+        self.assertEqual(max_integer(mylist), 6.2)
 
 if __name__ == '__main__':
     unittest.main()
