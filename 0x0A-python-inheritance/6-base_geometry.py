@@ -3,6 +3,7 @@
 Class Called BaseGeometry
 """
 
+
 class BaseGeometry:
     """This is a class called BaseGeometry"""
     def area(self):
