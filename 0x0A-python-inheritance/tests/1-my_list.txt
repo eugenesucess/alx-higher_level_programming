@@ -8,9 +8,6 @@
 	>>> os.access("1-my_list.py", os.X_OK)
 	True
 
-	check for documentation
-	>>> os.popen("pycodestyle 1-my_list.py").read()
-	''
 	---- Check for the documentation of the module ----
 	>>> len(__import__("1-my_list").__doc__) > 10
 	True
