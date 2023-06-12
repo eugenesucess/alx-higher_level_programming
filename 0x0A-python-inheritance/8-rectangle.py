@@ -6,8 +6,9 @@ inherit BaseGeometry class
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
-    """ectangle inherits from BaseGeometry"""
+    """Rectangle inherits from BaseGeometry to have access"""
 
     def __init__(self, width, height):
         """Instantiation of a new Rectangle"""
