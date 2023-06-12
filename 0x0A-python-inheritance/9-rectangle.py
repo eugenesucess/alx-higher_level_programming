@@ -3,7 +3,6 @@
 inherit BaseGeometry class
 """
 
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -12,11 +11,15 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """Instantiation of a new Rectangle"""
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", height)
+        super().integer_validator("height", height)
         self.height = height
-    def area(self):
-        """ returns the area of the rectangle"""
-        print(f"[Rectangle] {width}/{height}")
-        return (str(self.width * self.height))
+
+        def area(self):
+            """returns the area of the rectangle"""
+            return self.__width * self.__height
+
+        def __str__(self):
+            """ return to a descripcion about this class"""
+            return ("[Rectangle] {}/{}".format(self.__width, self.__height))
