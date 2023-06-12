@@ -5,4 +5,5 @@ creation fof empty BaseGeometry
 
 
 class BaseGeometry:
+    """empty class basegeometry created here"""
     pass
