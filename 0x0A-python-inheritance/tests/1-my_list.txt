@@ -1,7 +1,8 @@
 	tets cases for inheritance from list class
-
-	>>> import os
+	
 	>>> MyList = __import__('1-my_list').MyList
+	>>> import os
+
 
 	check if file is ececutable
 	>>> os.access("1-my_list.py", os.X_OK)
@@ -10,6 +11,17 @@
 	check for documentation
 	>>> os.popen("pycodestyle 1-my_list.py").read()
 	''
+	---- Check for the documentation of the module ----
+	>>> len(__import__("1-my_list").__doc__) > 10
+	True
+	
+	---- Check for the documentation of the function ----
+	>>> len(__import__("1-my_list").MyList.__doc__) > 10
+	True
+	
+	---- Check for the file has a shebang ----
+	>>> os.popen("cat 1-my_list.py | head -1").read()
+	'#!/usr/bin/python3\n'
 
 	>>> my_list = MyList()
 	>>> print(my_list)
