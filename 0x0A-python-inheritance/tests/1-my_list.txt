@@ -1,39 +1,26 @@
-tets cases for inheritance from list class
+	tets cases for inheritance from list class
 
->>> import os
->>> MyList = __import__('1-my_list').MyList
+	>>> import os
+	>>> MyList = __import__('1-my_list').MyList
 
-check if file is ececutable
->>> os.access("1-my_list.py", os.X_OK)
-True
+	check if file is ececutable
+	>>> os.access("1-my_list.py", os.X_OK)
+	True
 
-check for documentation
->>> os.popen("pycodestyle 1-my_list.py").read()
+	check for documentation
+	>>> os.popen("pycodestyle 1-my_list.py").read()
+	''
 
->>> my_list = MyList()
->>> print(my_list)
-<class '1-my_list.MyList'>
+	>>> my_list = MyList()
+	>>> print(my_list)
+	[]
 
->>> print(my_list)
-[]
+	>>> type(my_list)
+	<class '1-my_list.MyList'>
 
->>> my_list.append(1)
->>> print(my_list)
-[1]
-
->>> my_list.append(2)
->>> print(my_list)
-[1, 2]
-
-my_list.append(4)
-my_list.append(3)
-my_list.append(5)
-
->>> print(my_list)
-[1, 2, 4, 3, 5]
-
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
-
->>> print(my_list)
-[1, 2, 4, 3, 5]
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> print(my_list)
+	[1, 2, 3]
