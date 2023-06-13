@@ -11,9 +11,9 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+
     def to_json(self, attrs=None):
         """returns __dict__"""
-        if (type(attrs) == list and
-            all (type(items) == str for items in attrs)):
+        if (type(attrs) == list and all (type(items) == str for items in attrs)):
                 return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
