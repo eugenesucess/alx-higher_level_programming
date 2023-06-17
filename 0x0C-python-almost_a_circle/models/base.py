@@ -12,16 +12,17 @@ class Base:
     Base.(attribute name)
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
-        """loop through passed list to see if inside there is only dictionaries"""
+        """loop through passed list to see if there is only dictionaries"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         if type(list_dictionaries) is list:
@@ -31,7 +32,7 @@ class Base:
             return json.dumps(list_dictionaries)
         else:
             return "[]"
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Write the JSON string representation of list_objs to a file"""
