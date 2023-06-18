@@ -43,3 +43,10 @@ class Base:
                 dictionaries.append(lists.to_dictionary())
         with open(filename, "w") as f:
             f.write(cls.to_json_string(dictionaries))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        if json_string.__class__ is str:
+            return json.loads(json_string)
