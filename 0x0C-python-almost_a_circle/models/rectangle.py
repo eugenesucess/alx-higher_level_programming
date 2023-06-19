@@ -57,7 +57,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, valuePased):
         if type(valuePased) != int:
-            raise TypeError("yidth must be an integer")
+            raise TypeError("y must be an integer")
         if valuePased < 0:
             raise ValueError("y must be >= 0")
         self.__y = valuePased
