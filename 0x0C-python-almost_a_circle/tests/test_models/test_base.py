@@ -16,13 +16,13 @@ class TestBase_instantation(unittest.TestCase):
         """check if no parameter is passed """
         base1 = Base()
         base2 = Base()
-        self.assertEqual(base1, base2 - 1, "They are equal")
+        self.assertEqual(base1.id, base2.id - 1, "They are equal")
 
     def test_noneType(self):
         """check if none is passed"""
         base1 = Base(None)
         base2 = Base(None)
-        self.assertEqual(base1, base2 - 1, "They are equal")
+        self.assertEqual(base1.id, base2.id - 1, "They are equal")
 
     def test_moreThan_two(self):
         """test when more than two objects are created"""
@@ -30,7 +30,7 @@ class TestBase_instantation(unittest.TestCase):
         base2 = Base()
         base3 = Base(12)
         base4 = Base()
-        self.assertEqual(base1, base4 - 3, "They are equal")
+        self.assertEqual(base1.id, base4.id - 3, "They are equal")
     
     def test_str_as_id(self):
         """check if the string is passed as id"""
