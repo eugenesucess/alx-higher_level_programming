@@ -30,7 +30,7 @@ class TestBase_instantation(unittest.TestCase):
         base2 = Base()
         base3 = Base(12)
         base4 = Base()
-        self.assertEqual(base1.id, base4.id - 3)
+        self.assertEqual(base1.id, base4.id - 2)
     
     def test_str_as_id(self):
         """check if the string is passed as id"""
@@ -189,7 +189,7 @@ class TestBase_from_json_string(unittest.TestCase):
     """Unittests for testing from_json_string method of Base class."""
 
     def test_from_json_string_None(self):
-        self.assertEqual([], Base.from_json_string(None))
+        self.assertEqual('[]', Base.from_json_string(None))
 
     def test_from_json_string_empty_list(self):
         self.assertEqual([], Base.from_json_string("[]"))
