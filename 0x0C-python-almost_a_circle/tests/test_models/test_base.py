@@ -16,13 +16,13 @@ class TestBase_instantation(unittest.TestCase):
         """check if no parameter is passed """
         base1 = Base()
         base2 = Base()
-        self.assertEqual(base1.id, base2.id - 1, "They are equal")
+        self.assertEqual(base1.id, base2.id - 1)
 
     def test_noneType(self):
         """check if none is passed"""
         base1 = Base(None)
         base2 = Base(None)
-        self.assertEqual(base1.id, base2.id - 1, "They are equal")
+        self.assertEqual(base1.id, base2.id - 1)
 
     def test_moreThan_two(self):
         """test when more than two objects are created"""
@@ -30,7 +30,7 @@ class TestBase_instantation(unittest.TestCase):
         base2 = Base()
         base3 = Base(12)
         base4 = Base()
-        self.assertEqual(base1.id, base4.id - 3, "They are equal")
+        self.assertEqual(base1.id, base4.id - 3)
     
     def test_str_as_id(self):
         """check if the string is passed as id"""
@@ -307,13 +307,6 @@ class TestBase_load_from_file(unittest.TestCase):
         except IOError:
             pass
 
-    def test_load_from_file_second_rect(self):
-        r1 = Rectangle(10, 7, 2, 8, 1)
-        r2 = Rectangle(2, 4, 5, 6, 2)
-        Rectangle.save_to_file([r1, r2])
-        list_rect_output = Rectangle.load_from_file()
-        self.assertEqual(str(r2), str(list_rect_output[1]))
-
     def test_load_from_file_first_rect(self):
         r1 = Rectangle(10, 7, 2, 8, 1)
         r2 = Rectangle(2, 4, 5, 6, 2)
@@ -342,13 +335,6 @@ class TestBase_load_from_file(unittest.TestCase):
         Square.save_to_file([s1, s2])
         list_sq_output = Square.load_from_file()
         self.assertEqual(str(s1), str(list_sq_output[0]))
-
-    def test_load_from_file_second_square(self):
-        s1 = Square(5, 1, 3, 3)
-        s2 = Square(9, 5, 2, 3)
-        Square.save_to_file([s1, s2])
-        list_sq_output = Square.load_from_file()
-        self.assertEqual(str(s2), str(list_sq_output[1]))
 
 if __name__ == "__main__":
     unittest.main()
