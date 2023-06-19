@@ -607,7 +607,7 @@ class TestSquare_update_kwargs(unittest.TestCase):
 
     def test_update_args_and_kwargs(self):
         s = Square(10, 10, 10, 10)
-        s.update(89, 10, y=6)
+        s.update(89, 10, y=10)
         self.assertEqual("[Square] (89) 10/10 - 10", str(s))
 
     def test_update_kwargs_some_wrong_keys(self):
