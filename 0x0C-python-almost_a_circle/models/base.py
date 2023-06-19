@@ -1,7 +1,5 @@
 #!usr/bin/python3
-"""
-parent class Bas
-"""
+"""defines model class base"""
 import json
 
 
@@ -46,6 +44,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Return the deserialization of a JSON string."""
         if json_string is None or len(json_string) == 0:
             return "[]"
         if json_string.__class__ is str:
