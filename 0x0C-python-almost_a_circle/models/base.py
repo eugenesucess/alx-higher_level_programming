@@ -50,3 +50,26 @@ class Base:
             return "[]"
         if json_string.__class__ is str:
             return json.loads(json_string)
+    
+    @classmethod
+    def create(cls, **dictionary):
+        """create the attributes of the instance to be created"""
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                newInstance = cls(1, 1)
+            else:
+                newInstance = cls(1)
+            newInstance.update(**dictionary)
+            return newInstance
+    
+    @classmethod
+    def load_from_file(cls):
+        """ loads from file, return lists of instances"""
+        filename = str(cls.__name__)+".json"
+        try:
+            with open(filename, "r") as f:
+                collection_dicts = cls.from_json_string(f.read())
+                for single_dict in collection_dicts:
+                    return [cls.create(**single_dict)]
+        except IOError:
+            return []
